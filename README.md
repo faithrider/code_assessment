@@ -6,7 +6,7 @@ This program allows a user to input a 4x4 grid of values, then interpolate any n
 
 ### Example:
 
-|Table 1        |
+|Table 1|       |
 |---|---|---|---|
 | 0 | 0 | 1 | 0 |
 | 0 | 6 | 3 | 2 |
