@@ -1,6 +1,6 @@
 from tkinter import *
 
-
+# author: ["Faith Rider"]
 
 '''
 Section One: Functions/Main Code Action
