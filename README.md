@@ -13,7 +13,7 @@ This program allows a user to input a 4x4 grid of values, then interpolate any n
 | 0 | 4 | 0 | 0 |
 | 5 | 0 | 0 | 0 |
 
-| Syntax      | Description |
+| Table 1                   |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
