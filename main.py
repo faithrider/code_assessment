@@ -177,7 +177,7 @@ button_7 = Button(window, text="7", bg='#38A3A5', fg='#C7F9CC',padx=40, pady=20,
 button_8 = Button(window, text="8", bg='#38A3A5', fg='#C7F9CC',padx=40, pady=20, command=lambda: user_click(8))
 button_9 = Button(window, text="9", bg='#38A3A5', fg='#C7F9CC',padx=40, pady=20, command=lambda: user_click(9))
 
-button_clear = Button(window, text="Clear Cell", bg='#80ED99', fg='#C7F9CC', padx=160, pady=20, command=user_click_clear)
+button_clear = Button(window, text="Clear Entry", bg='#80ED99', fg='#C7F9CC', padx=156, pady=20, command=user_click_clear)
 ready_to_interpolate = Button(window, text="Ready to Interpolate", bg='#57CC99', fg='#C7F9CC', padx=132, pady=20, command=switch_to_interpolation)
 
 # Puts input buttons to window.
