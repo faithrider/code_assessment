@@ -13,19 +13,21 @@ def user_click(input_number):
     entry.delete(0, END)
     entry.insert(0, str(current_value) + str(input_number))
 
-# When user clicks 'clear', it clears the current entry box
+# When user clicks 'clear', it clears the current entry box.
 def user_click_clear():
     entry.delete(0, END)
 
-# When user clicks a cell, it sends the current entry box to said cell
+# When user clicks a cell, it sends the current entry box to said cell.
 def user_click_grid(clicked_button):
-    # If the user doesn't input anything, it auto sets to 0.
+    # Phase 1 goes through this code to change the grid.
     if window.title() == "Stage One: Setting Grid Values":
+        # If the user doesn't input anything, it auto sets to 0.
         if entry.get() == '':
             clicked_button.configure(text = '0')
         else:
             clicked_button.configure(text = entry.get())
         entry.delete(0, END)
+    # Phase 2 goes through this code to interpolate the grid.
     else:
         interpolate(clicked_button)
 
@@ -71,7 +73,7 @@ def create_values_array():
 
 
 
-# Interpolates the selected cell value using its neighbors
+# Interpolates the selected cell value using its neighbors.
 def interpolate(clicked_button):
     row = clicked_button.grid_info()['row']
     col = clicked_button.grid_info()['column']
@@ -80,11 +82,11 @@ def interpolate(clicked_button):
     array_of_values = create_values_array()
     
     num_neighbors = 0
-    new_value = -1 * array_of_values[row][col]               #Accounts for the value itself being included in the sum
+    new_value = -1 * array_of_values[row][col]               #Accounts for the value itself being included in the sum.
     for x_ in range(-1, 1):
         for y_ in range(-1,1):
             try:
-                new_value += array_of_values[row+x_][col+y_] #Adds value to sum
+                new_value += array_of_values[row+x_][col+y_] #Adds value to sum.
                 num_neighbors += 1
             except IndexError:
                 new_value = new_value
@@ -93,12 +95,7 @@ def interpolate(clicked_button):
 
     clicked_button.configure(text = new_value)
 
-
-
 # Section One -> END
-
-
-
 
 
 '''
@@ -157,7 +154,6 @@ row3_col3.grid(row=3, column=3)
 
 instructions.grid(row=4,column=0, columnspan=10)
 
-
 # Creates the entry/showcase box.
 entry = Entry(window, bg='#C7F9CC', width=35, borderwidth=5)
 entry.grid(row=5,column=0, columnspan=4, padx=10, pady=10)
@@ -198,11 +194,7 @@ button_9.grid(row=8, column=2)
 button_clear.grid(row=9, column=0, columnspan=4)
 ready_to_interpolate.grid(row=10, column=0, columnspan=4)
 
-
-
 # Runs the GUI.
 window.mainloop()
-
-
 
 # Section Two -> END
